@@ -88,22 +88,23 @@ Console.WriteLine(SommaTotaleArray);
 Console.WriteLine("Da quanti numeri è composto l'array?");
 int lunghezzaArray = Convert.ToInt32(Console.ReadLine());
 
-int[] arrayutente = new int[lunghezzaArray];
+int[] arrayUtente = new int[lunghezzaArray];
 
-for( int i = 0; i < arrayutente.Length; i++)
+for( int i = 0; i < arrayUtente.Length; i++)
 {
     Console.WriteLine($"Inserisci il numero {i + 1} di {lunghezzaArray}");
-    arrayutente[i] = Convert.ToInt32(Console.ReadLine());
+    arrayUtente[i] = Convert.ToInt32(Console.ReadLine());
 }
 
 Console.WriteLine("Stampa array di numeri");
-StampaArray(arrayutente);
+StampaArray(arrayUtente);
 
 Console.WriteLine("Stampa array di numeri elevati al quadrato");
-StampaArray(ElevaArrayAlQuadrato(arrayutente));
+StampaArray(ElevaArrayAlQuadrato(arrayUtente));
 
 Console.WriteLine("Somma di tutti i numeri");
-Console.WriteLine(SommaElementiArray(arrayutente));
+Console.WriteLine(SommaElementiArray(arrayUtente));
 
 Console.WriteLine("Somma di tutti i numeri elevati al quadrato");
-Console.WriteLine(SommaElementiArray(ElevaArrayAlQuadrato(arrayutente)));
+Console.WriteLine(SommaElementiArray(ElevaArrayAlQuadrato(arrayUtente)));
+
