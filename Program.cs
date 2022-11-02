@@ -108,3 +108,65 @@ Console.WriteLine(SommaElementiArray(arrayUtente));
 Console.WriteLine("Somma di tutti i numeri elevati al quadrato");
 Console.WriteLine(SommaElementiArray(ElevaArrayAlQuadrato(arrayUtente)));
 
+// Fattoriale di un numero
+
+// Iterativo
+Console.WriteLine("Inserisci un numero per ottenere il suo fattoriale");
+int numeroUtentePeriterativo = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("il fattoriale del tuo numero è: " + FattorialeIterativo(numeroUtentePeriterativo);
+
+int FattorialeIterativo(int numero)
+{
+    if(numero < 0)
+    {
+        return 0;  
+    }
+    
+    int fattoriale = 1;
+
+    for (int i = 0; i < numero; i++)
+    {
+        fattoriale *= i;
+    }
+
+    return fattoriale;
+}
+
+// Ricorsivo
+Console.WriteLine("Inserisci un numero per ottenere il suo fattoriale");
+int numeroUtentePerRicorsivo = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("il fattoriale del tuo numero è: " + FattorialeRicorsivo(numeroUtentePerRicorsivo);
+
+
+int FattorialeRicorsivo(int numero)
+{
+    if (numero == 0)
+    {
+        return 1;
+    }
+
+    return numero * FattorialeRicorsivo(numero - 1);
+}
+
+// Sequenza di Fibonacci
+int Fibonacci(int numero)
+{
+    int[] array = new int[numero + 1];
+
+    for (int i = 0; i <= numero; i++)
+    {
+        if(i == 0)
+        {
+            array[i] = 0;
+        }else if (i == 1){
+            array[i] = 1;   
+        }else
+        {
+            int SequenzaFibonacci = array[i - 1] + array[i - 2];
+            array[i] = SequenzaFibonacci;
+        }
+    }
+    return array;
+}
